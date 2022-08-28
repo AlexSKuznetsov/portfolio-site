@@ -1,6 +1,6 @@
 export const Button = () => {
   const handleClick = () => {
-    alert('Yeeesss!');
+    alert('Sorry, not finish that yet!');
   };
 
   return (
