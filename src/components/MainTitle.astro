@@ -1,7 +1,8 @@
 ---
-import alex from '../assets/images/alex_photo.jpeg';
+import alex from '/assets/images/alex_photo.jpeg';
 // @ts-ignore
-import Home from '@astropub/icons/Home';
+import * as Icon from '@astropub/icons';
+const { size = 14, width = size, height = size, ...more } = Astro.props;
 ---
 
 <section>
@@ -13,7 +14,7 @@ import Home from '@astropub/icons/Home';
         >
       </h1>
       <div class='flex px-2 items-center content-center'>
-        <Home size='14' class='p-0' />
+        <Icon.Home size={size} />
         <p class='ml-1 text-xs text-slate-700'>Live in Lithuania, Vilnius</p>
       </div>
     </div>

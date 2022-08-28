@@ -7,8 +7,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'static',
+  adapter: vercel(),
   site: 'https://alex-porfolio.vercel.app/',
   integrations: [tailwind(), react(), sitemap()],
-  adapter: vercel()
 });
