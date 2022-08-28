@@ -1,9 +1,17 @@
 ---
+import alex from '../assets/images/alex_photo.jpeg';
 ---
 
-<h1 class='font-bold text-2xl p-2'>
-  Hi, my name is <span class='font-extrabold text-blue-500'
-    >Alexander Kuznetov</span
-  >
-</h1>
-<p class='px-2 text-xs text-slate-700'>Live in Lithuania, Vilnius</p>
+<section>
+  <div class='flex items-center justify-between content-center'>
+    <div>
+      <h1 class='font-bold text-2xl p-2'>
+        Hi, my name is <span class='font-extrabold text-blue-500'
+          >Alex Kuznetov</span
+        >
+      </h1>
+      <p class='px-2 text-xs text-slate-700'>Live in Lithuania, Vilnius</p>
+    </div>
+    <img src={alex} alt='Alex photo' class='w-24 h-24 rounded-full mx-auto' />
+  </div>
+</section>
