@@ -1,5 +1,7 @@
 ---
 import alex from '../assets/images/alex_photo.jpeg';
+// @ts-ignore
+import Home from '@astropub/icons/Home';
 ---
 
 <section>
@@ -10,7 +12,10 @@ import alex from '../assets/images/alex_photo.jpeg';
           >Alex Kuznetov</span
         >
       </h1>
-      <p class='px-2 text-xs text-slate-700'>Live in Lithuania, Vilnius</p>
+      <div class='flex px-2 items-center content-center'>
+        <Home size='14' class='p-0' />
+        <p class='ml-1 text-xs text-slate-700'>Live in Lithuania, Vilnius</p>
+      </div>
     </div>
     <img src={alex} alt='Alex photo' class='w-24 h-24 rounded-full mx-auto' />
   </div>
