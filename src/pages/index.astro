@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import MainTitle from '../components/MainTitle.astro';
+import Summary from '../components/Summary.astro';
+import Services from '../components/Services.astro';
+import HireMe from '../components/HireMe.astro';
+---
+
+<Layout title='Alexander Kuznetsov Portfolio site'>
+  <main>
+    <MainTitle />
+    <Summary />
+    <Services />
+    <ul role='list' class='link-card-grid'>
+      <Card
+        href='#'
+        title='Marketing sites'
+        body='Fast, responsive, SEO frendly marketing sites with the Jamstack approach.'
+      />
+      <Card
+        href='#'
+        title='E-commerce'
+        body='Shopify stores with sets of edge technologies.'
+      />
+      <Card
+        href='#'
+        title='Mobile apps'
+        body='Universal mobile apps with React Native platform.'
+      />
+      <Card
+        href='#'
+        title='BPM Automation'
+        body='Integrate Microservices, Human tasks, API endpoinds with universal process orchestrator.'
+      />
+    </ul>
+    <HireMe />
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  }
+
+  h1 {
+    margin: 2rem 0;
+  }
+
+  main {
+    margin: auto;
+    padding: 1em;
+    max-width: 60ch;
+  }
+
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+    50% {
+      background-position-y: 80%;
+    }
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+</style>
