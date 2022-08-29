@@ -1,5 +1,5 @@
 ---
-import alex from '/assets/images/alex_photo.jpeg';
+import alex_photo_url from '/assets/images/alex_photo.jpeg';
 // @ts-ignore no types yet for astro icons
 import * as Icon from '@astropub/icons';
 const { size = 14, width = size, height = size, ...more } = Astro.props;
@@ -17,5 +17,5 @@ const { size = 14, width = size, height = size, ...more } = Astro.props;
       <p class='ml-1 text-xs text-slate-300'>Live in Lithuania, Vilnius</p>
     </div>
   </div>
-  <img src={alex} alt='Alex photo' class='w-24 h-24 rounded-full' />
+  <img src={alex_photo_url} alt='Alex photo' class='w-24 h-24 rounded-full' />
 </section>
