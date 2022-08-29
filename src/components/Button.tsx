@@ -1,11 +1,13 @@
 export const Button = () => {
   const handleClick = () => {
-    console.log('bip bop');
+    location.href =
+      'mailto:kuznecov.alexandr@gmail.com' +
+      '&subject=Lets discuss new project';
   };
 
   return (
     <a
-      className='p-1 mx-3 inline-flex gap-y-2 gap-x-2 flex-wrap items-center text-neutral-50 border-slate-100 border rounded-full hover:border-opacity-50  hover:text-white cursor-pointer'
+      className='mx-3 inline-flex gap-y-2 gap-x-2 flex-wrap items-center text-neutral-50 border-slate-100 border rounded-full hover:border-opacity-50  hover:text-white cursor-pointer'
       onClick={handleClick}
     >
       <span className='px-3 py-0.5 text-neutral-50 text-xs font-semibold uppercase bg-blue-800 rounded-full'>

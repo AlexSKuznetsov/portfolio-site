@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import MainTitle from '../components/MainTitle.astro';
-import Summary from '../components/Summary.astro';
 import Services from '../components/Services.astro';
 import HireMe from '../components/HireMe.astro';
 ---
@@ -10,26 +9,25 @@ import HireMe from '../components/HireMe.astro';
 <Layout title='Alexander Kuznetsov Portfolio site'>
   <main class='my-4'>
     <MainTitle size='14' />
-    <Summary />
     <Services />
     <ul role='list' class='link-card-grid'>
       <Card
-        href='#'
+        href='/'
         title='Marketing sites'
         body='Fast, responsive, SEO frendly marketing sites with the Jamstack approach.'
       />
       <Card
-        href='#'
+        href='/'
         title='E-commerce'
         body='Shopify stores with sets of edge technologies.'
       />
       <Card
-        href='#'
+        href='/'
         title='Mobile apps'
         body='Universal mobile apps with React Native platform.'
       />
       <Card
-        href='#'
+        href='/'
         title='BPM Automation'
         body='Integrate Microservices, Human tasks, API endpoinds with universal process orchestrator.'
       />
