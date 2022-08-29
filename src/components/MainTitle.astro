@@ -1,23 +1,21 @@
 ---
 import alex from '/assets/images/alex_photo.jpeg';
-// @ts-ignore
+// @ts-ignore no types yet for astro icons
 import * as Icon from '@astropub/icons';
 const { size = 14, width = size, height = size, ...more } = Astro.props;
 ---
 
-<section>
-  <div class='flex items-center justify-between content-center'>
-    <div>
-      <h1 class='font-bold text-2xl p-2'>
-        Hi, my name is <span class='font-extrabold text-blue-500'
-          >Alex Kuznetsov</span
-        >
-      </h1>
-      <div class='flex px-2 items-center content-center'>
-        <Icon.Home size={size} />
-        <p class='ml-1 text-xs text-slate-700'>Live in Lithuania, Vilnius</p>
-      </div>
+<section class='flex items-center justify-around content-center'>
+  <div>
+    <h1 class='font-bold text-2xl p-2 text-slate-200'>
+      Hi, my name is <span class='font-extrabold text-blue-500'
+        >Alex Kuznetsov</span
+      >
+    </h1>
+    <div class='flex px-2 items-center content-center'>
+      <Icon.Home size={size} class='fill-slate-100' />
+      <p class='ml-1 text-xs text-slate-300'>Live in Lithuania, Vilnius</p>
     </div>
-    <img src={alex} alt='Alex photo' class='w-24 h-24 rounded-full mx-auto' />
   </div>
+  <img src={alex} alt='Alex photo' class='w-24 h-24 rounded-full' />
 </section>
