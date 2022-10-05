@@ -7,12 +7,12 @@ import HireMe from '../components/HireMe.astro';
 ---
 
 <Layout title='Alexander Kuznetsov Portfolio site'>
-  <main class='my-4'>
+  <main class='p-4 my-2 max-w-2xl mx-auto'>
     <MainTitle size='14' />
     <Services />
     <ul role='list' class='link-card-grid'>
       <Card
-        href='/'
+        href='/marketing'
         title='Marketing sites'
         body='Fast, responsive, SEO frendly marketing sites with the Jamstack approach.'
       />
@@ -40,17 +40,6 @@ import HireMe from '../components/HireMe.astro';
   :root {
     --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
   }
-
-  h1 {
-    margin: 2rem 0;
-  }
-
-  main {
-    margin: auto;
-    padding: 1em;
-    max-width: 800px;
-  }
-
   .text-gradient {
     font-weight: 900;
     background-image: var(--astro-gradient);
