@@ -10,11 +10,11 @@ const { href, title, body } = Astro.props;
 
 <li class='link-card'>
   <a href={href}>
-    <h2 class='font-bold text-sm'>
+    <h2 class='inline-block font-bold text-sm'>
       {title}
       <span>&rarr;</span>
     </h2>
-    <p>
+    <p class='text-sm mt-2'>
       {body}
     </p>
   </a>
@@ -54,11 +54,6 @@ const { href, title, body } = Astro.props;
   h2 {
     margin: 0;
     transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  p {
-    margin-top: 0.75rem;
-    margin-bottom: 0;
   }
 
   h2 span {

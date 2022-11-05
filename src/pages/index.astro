@@ -3,36 +3,50 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import MainTitle from '../components/MainTitle.astro';
 import Services from '../components/Services.astro';
+import Summary from '../components/Summary.astro';
 import HireMe from '../components/HireMe.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title='Alexander Kuznetsov Portfolio site'>
   <main class='p-4 my-2 max-w-2xl mx-auto'>
-    <MainTitle size='14' />
+    <MainTitle size='20' />
+    <Summary />
     <Services />
     <ul role='list' class='link-card-grid'>
       <Card
-        href='/marketing'
+        href='/'
         title='Marketing sites'
-        body='Fast, responsive, SEO frendly marketing sites with the Jamstack approach.'
+        body='Fast, responsive, SEO frendly marketing sites and blogs with the Jamstack approach.'
       />
       <Card
         href='/'
         title='E-commerce'
-        body='Shopify stores with sets of edge technologies.'
+        body='Shopify stores with sets of edge technologies or just integration existing sites with payment infrastructure.'
       />
       <Card
         href='/'
         title='Mobile apps'
-        body='Universal mobile apps with React Native platform.'
+        body='Cross platform mobile apps with React Native for Android and Apple devices.'
       />
       <Card
         href='/'
-        title='BPM Automation'
-        body='Integrate Microservices, Human tasks, API endpoinds with universal process orchestrator.'
+        title='Fullstack Apps'
+        body='Fintech, Retail, Healthcare, Manufactures - almost any business applications with Frontend and Backend.'
+      />
+      <Card
+        href='/'
+        title='Blockchain dApps'
+        body='Blockchain apps on top of Solana - one of the fastes chain in the Crypto world with low fee transactions.'
+      />
+      <Card
+        href='/'
+        title='Process Automation (BPM)'
+        body='Integrated Microservices with Human tasks and API endpoinds with one universal process orchestrator.'
       />
     </ul>
     <HireMe />
+    <Footer />
   </main>
 </Layout>
 
