@@ -23,6 +23,7 @@
     "@astrojs/image": "^0.11.4",
     "@astrojs/vercel": "^1.0.1",
     "@astropub/icons": "^0.2.0",
-    "@types/react": "^18.0.17"
+    "@types/react": "^18.0.17",
+    "sharp": "^0.31.2"
   }
 }

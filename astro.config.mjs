@@ -10,5 +10,7 @@ export default defineConfig({
   output: 'static',
   adapter: vercel(),
   site: 'https://alex-porfolio.vercel.app/',
-  integrations: [tailwind(), react(), sitemap(), image()]
+  integrations: [tailwind(), react(), sitemap(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  })]
 });
