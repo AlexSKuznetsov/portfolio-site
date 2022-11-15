@@ -2,8 +2,7 @@
 // @ts-ignore no types yet for astro icons
 import * as Icon from '@astropub/icons';
 import { Image } from '@astrojs/image/components';
-import alex_photo_url from '../images/alex_photo-min.jpeg';
-const { size = 16, width = size, height = size, ...more } = Astro.props;
+const { size = 16 } = Astro.props;
 ---
 
 <section class='mt-2 flex items-start justify-between content-center'>
@@ -21,8 +20,10 @@ const { size = 16, width = size, height = size, ...more } = Astro.props;
     </div>
   </div>
   <Image
-    src={alex_photo_url}
+    src='/images/alexphoto-min.jpeg'
     alt='Alex photo'
+    width={24}
+    height={24}
     class='w-24 h-24 rounded-full mt-2'
   />
 </section>
