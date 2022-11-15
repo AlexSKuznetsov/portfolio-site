@@ -1,7 +1,8 @@
 ---
-import alex_photo_url from '/assets/images/alex_photo.jpeg';
 // @ts-ignore no types yet for astro icons
 import * as Icon from '@astropub/icons';
+import { Image } from '@astrojs/image/components';
+import alex_photo_url from '../images/alex_photo-min.jpeg';
 const { size = 16, width = size, height = size, ...more } = Astro.props;
 ---
 
@@ -19,7 +20,7 @@ const { size = 16, width = size, height = size, ...more } = Astro.props;
       </p>
     </div>
   </div>
-  <img
+  <Image
     src={alex_photo_url}
     alt='Alex photo'
     class='w-24 h-24 rounded-full mt-2'

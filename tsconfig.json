@@ -1,5 +1,5 @@
 {
   "compilerOptions": {
-    "types": ["astro/client"]
+    "types": ["@astrojs/image/client"]
   }
 }
