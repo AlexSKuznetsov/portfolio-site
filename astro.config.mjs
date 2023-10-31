@@ -13,6 +13,9 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
+    speedInsights: {
+      enabled: true,
+    },
   }),
   site: 'https://alex-porfolio.vercel.app/',
   integrations: [tailwind(), react(), sitemap()]
