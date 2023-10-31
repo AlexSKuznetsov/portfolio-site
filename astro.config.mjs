@@ -1,16 +1,19 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import vercel from '@astrojs/vercel/static';
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-import image from "@astrojs/image";
+import vercel from '@astrojs/vercel/static';
+
+
 
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  adapter: vercel(),
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   site: 'https://alex-porfolio.vercel.app/',
-  integrations: [tailwind(), react(), sitemap(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  })]
+  integrations: [tailwind(), react(), sitemap()]
 });

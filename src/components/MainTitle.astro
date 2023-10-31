@@ -1,7 +1,7 @@
 ---
 // @ts-ignore no types yet for astro icons
 import * as Icon from '@astropub/icons';
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 const { size = 16 } = Astro.props;
 ---
 
@@ -19,8 +19,9 @@ const { size = 16 } = Astro.props;
       </p>
     </div>
   </div>
+
   <Image
-    src='/images/alexphoto.jpeg'
+    src={'/images/alexphoto.jpeg'}
     alt='Alex photo'
     width={120}
     height={120}

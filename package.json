@@ -10,18 +10,17 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/react": "^1.1.0",
+    "@astrojs/react": "^3.0.4",
     "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^1.0.0",
-    "astro": "^1.1.1",
+    "@astrojs/tailwind": "^5.0.2",
+    "astro": "^3.4.0",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@astrojs/image": "^0.11.4",
-    "@astrojs/vercel": "^1.0.1",
+    "@astrojs/vercel": "^1.0.2",
     "@astropub/icons": "^0.2.0",
     "@types/react": "^18.0.17",
     "sharp": "^0.31.2"
