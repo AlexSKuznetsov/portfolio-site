@@ -21,11 +21,12 @@ const { size = 16 } = Astro.props;
   </div>
 
   <Image
-    src={'/images/alexphoto.jpeg'}
-    alt='Alex photo'
-    width={120}
-    height={120}
+    src={'/images/alexphoto-min.jpeg'}
+    alt='Alex'
+    width={80}
+    height={80}
     format='webp'
+    loading='lazy'
     class='rounded-full mt-2'
   />
 </section>

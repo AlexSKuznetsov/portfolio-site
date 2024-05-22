@@ -1,5 +1,5 @@
 {
   "compilerOptions": {
-    "types": ["@astrojs/image/client"]
+    "jsx": "react-jsx"
   }
 }
