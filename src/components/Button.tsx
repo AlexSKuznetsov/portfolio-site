@@ -13,6 +13,7 @@ export const Button = () => {
 
   useEffect(() => {
     if (WebApp.platform !== 'unknown') {
+      WebApp.expand();
       setIsTelegram(true);
     }
   }, [WebApp.platform]);
