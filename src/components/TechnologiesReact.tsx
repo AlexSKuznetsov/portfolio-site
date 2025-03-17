@@ -89,7 +89,7 @@ const categoryTitles = {
   tools: 'Tools & Development'
 };
 
-export default function Technologies() {
+export default function TechnologiesComponent() {
   return (
     <section className="my-16 max-w-4xl mx-auto px-4">
       <h2 className="text-3xl font-bold text-slate-200 mb-12 text-center">My Technology Stack</h2>
