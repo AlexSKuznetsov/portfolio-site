@@ -9,15 +9,15 @@ const { href, title, body } = Astro.props;
 ---
 
 <li class='link-card'>
-  <div>
-    <h2 class='inline-block font-bold text-sm'>
+  <a href={href} class='block p-4 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-all duration-200'>
+    <h2 class='inline-flex items-center gap-1 font-bold text-md text-slate-200 group'>
       {title}
-      <span>&rarr;</span>
+      <span class='opacity-0 group-hover:opacity-100 transition-opacity duration-200'>&rarr;</span>
     </h2>
-    <p class='text-sm mt-2'>
+    <p class='text-sm mt-2 text-slate-300'>
       {body}
     </p>
-  </div>
+  </a>
 </li>
 <style>
   :root {

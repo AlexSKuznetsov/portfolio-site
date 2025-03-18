@@ -1,0 +1,159 @@
+---
+import Analytics from '../components/layout/Analytics.astro';
+import Layout from './Layout.astro';
+import Footer from '../components/layout/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Analytics id='UA-73668145-1' />
+<Layout title={`${title} - Alexander Kuznetsov`}>
+  <main class='p-4 my-8 max-w-4xl mx-auto'>
+    <div class='mb-12'>
+      <a href='/' class='group inline-flex items-center gap-2 text-sm font-medium text-slate-200 hover:text-slate-100 transition-all duration-200'>
+        <span class='inline-block transition-transform group-hover:-translate-x-1'>&larr;</span>
+        <span>Back to home</span>
+      </a>
+    </div>
+    <article class='relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-2xl p-8 md:p-12 shadow-2xl border border-slate-700/50'>
+      <div class='absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl'></div>
+      <div class='relative'>
+        <h1 class='text-4xl md:text-5xl font-bold text-slate-100 mb-6'>{title}</h1>
+        <p class='text-slate-200 text-xl md:text-2xl font-light mb-16 leading-relaxed'>{description}</p>
+        <div class='prose prose-lg prose-invert max-w-none'>
+          <slot />
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose {
+    --tw-prose-invert-headings: theme(colors.slate.100);
+    --tw-prose-invert-body: theme(colors.slate.200);
+    --tw-prose-invert-links: theme(colors.slate.200);
+    --tw-prose-invert-bold: theme(colors.slate.200);
+    --tw-prose-invert-code: theme(colors.slate.200);
+    --tw-prose-invert-counters: theme(colors.slate.200);
+    --tw-prose-invert-bullets: theme(colors.slate.200);
+  }
+  
+  .prose :where(h2):not(:where([class~="not-prose"] *)) {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size: 1.75em;
+    font-weight: 600;
+    color: theme(colors.slate.100);
+  }
+
+  .prose :where(h3):not(:where([class~="not-prose"] *)) {
+    color: theme(colors.slate.100);
+    font-size: 1.35em;
+    margin-bottom: 1em;
+    font-weight: 500;
+  }
+
+  .prose :where(p):not(:where([class~="not-prose"] *)) {
+    color: theme(colors.slate.200);
+    line-height: 1.8;
+    font-size: 1.1em;
+  }
+
+  .prose :where(ul):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.75em;
+    margin-bottom: 2em;
+    color: theme(colors.slate.100);
+  }
+
+  .prose :where(li):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.7;
+  }
+
+  .prose :where(strong):not(:where([class~="not-prose"] *)) {
+    color: theme(colors.slate.200);
+    font-weight: 500;
+  }
+
+  .high-contrast-section {
+    background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem 0 3rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .high-contrast-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 3px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .example-project {
+    background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.4));
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .example-project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 3px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .example-project h3 {
+    color: theme(colors.slate.100);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+
+  .example-project p {
+    color: theme(colors.slate.200);
+    font-size: 1.1em;
+    line-height: 1.7;
+  }
+
+  .example-project ul {
+    margin: 1.25rem 0;
+  }
+
+  .example-project li {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .example-project li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: theme(colors.blue.400);
+  }
+
+  .example-project .results {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+    color: theme(colors.slate.200);
+    font-size: 1.1em;
+  }
+</style>
