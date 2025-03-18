@@ -12,7 +12,11 @@ const { title, description } = Astro.props;
 ---
 
 <Analytics id='UA-73668145-1' />
-<Layout title={`${title} - Alexander Kuznetsov`}>
+<Layout 
+  title={`${title} - Alexander Kuznetsov`}
+  description={`${description} Learn how I can help your business succeed with professional ${title.toLowerCase()} development services.`}
+  type="article"
+  image={`/images/services/${title.toLowerCase().replace(/ /g, '-')}.jpg`}>
   <main class='p-4 my-8 max-w-4xl mx-auto'>
     <div class='mb-12'>
       <a href='/' class='group inline-flex items-center gap-2 text-sm font-medium text-slate-200 hover:text-slate-100 transition-all duration-200'>

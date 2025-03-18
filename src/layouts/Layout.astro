@@ -1,27 +1,32 @@
 ---
+import SEO from '../components/layout/SEO.astro';
+
 export interface Props {
   title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
 }
 
-const { title } = Astro.props;
+const { 
+  title,
+  description = 'Skilled Full Stack Developer with 5+ years of experience in fintech, telecom, manufacturing, retail, and healthcare. Specializing in modern web technologies, AI applications, and workflow automation.',
+  image,
+  type = 'website'
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
-    <meta
-      name='google-site-verification'
-      content='akWOXNLJv9-XEjt9nxEazWd0vdx3o71cPCmijhUwLs4'
+    <meta name='google-site-verification' content='akWOXNLJv9-XEjt9nxEazWd0vdx3o71cPCmijhUwLs4' />
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      type={type}
     />
-    <meta
-      name='description'
-      content='Alex Kuznetsov. Personal portfolio site. Skilled and ambitious Frontend/JavaScript Developer with 5+ years of wide-ranging experience in the fintech, telecom, manufacturer, retail, and healthcare domains in building web applications.'
-    />
-    <title>{title}</title>
   </head>
   <body class='bg-gray-900'>
     <slot />
