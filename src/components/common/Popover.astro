@@ -1,0 +1,27 @@
+---
+export interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+<span class="popover-container relative inline-block">
+  <span class="popover-trigger cursor-pointer" tabindex="0">
+    <slot />
+  </span>
+  <span class="popover-content transition-opacity duration-200 absolute left-1/2 -translate-x-1/2 mt-2 z-50 min-w-[180px] max-w-xs p-3 rounded-lg bg-slate-900 text-slate-100 text-sm shadow-xl border border-slate-700 whitespace-normal pointer-events-none">
+    {text}
+  </span>
+</span>
+<style>
+  .popover-container:hover .popover-content,
+  .popover-container:focus-within .popover-content {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .popover-content {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+</style>

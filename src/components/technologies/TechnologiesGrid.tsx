@@ -1,3 +1,4 @@
+import Popover from './Popover';
 import {
   siJavascript,
   siTypescript,
@@ -17,68 +18,81 @@ interface Technology {
   name: string;
   icon: { path: string; hex: string };
   category: 'frontend' | 'backend' | 'tools';
+  business: string;
 }
 
 const technologies: Technology[] = [
   {
     name: 'JavaScript',
     icon: siJavascript,
-    category: 'frontend'
+    category: 'frontend',
+    business: 'The core language of the web, enabling interactive, dynamic user experiences that drive engagement and conversions.'
   },
   {
     name: 'TypeScript',
     icon: siTypescript,
-    category: 'frontend'
+    category: 'frontend',
+    business: 'Adds type safety to JavaScript, reducing bugs and improving maintainability for complex business applications.'
   },
   {
     name: 'React',
     icon: siReact,
-    category: 'frontend'
+    category: 'frontend',
+    business: 'A leading UI library for building fast, responsive interfaces, ensuring a seamless customer journey.'
   },
   {
     name: 'Next.js',
     icon: siNextdotjs,
-    category: 'frontend'
+    category: 'frontend',
+    business: 'A React framework for server-side rendering and static sites, boosting SEO and performance for marketing and content-driven businesses.'
   },
   {
     name: 'Three.js',
     icon: siThreedotjs,
-    category: 'frontend'
+    category: 'frontend',
+    business: 'Powers advanced 3D graphics in browsers, ideal for immersive product demos, configurators, and interactive storytelling.'
   },
   {
     name: 'GraphQL',
     icon: siGraphql,
-    category: 'frontend'
+    category: 'frontend',
+    business: 'Modern API technology, allowing flexible, efficient data fetching—perfect for scalable, personalized digital products.'
   },
   {
     name: 'Tailwind CSS',
     icon: siTailwindcss,
-    category: 'frontend'
+    category: 'frontend',
+    business: 'Utility-first CSS framework for rapid, consistent UI development, keeping your brand’s look polished and adaptable.'
   },
   {
     name: 'Astro',
     icon: siAstro,
-    category: 'frontend'
+    category: 'frontend',
+    business: 'Modern static site builder focused on speed and simplicity, delivering blazing-fast landing pages and blogs.'
   },
   {
     name: 'Go',
     icon: siGo,
-    category: 'backend'
+    category: 'backend',
+    business: 'High-performance backend language, ideal for scalable, reliable business services and APIs.'
   },
   {
     name: 'PostgreSQL',
     icon: siPostgresql,
-    category: 'backend'
+    category: 'backend',
+    business: 'Advanced open-source database, ensuring your business data is secure, reliable, and scalable.'
   },
   {
     name: 'Redis',
     icon: siRedis,
-    category: 'backend'
+    category: 'backend',
+    business: 'In-memory data store for caching and real-time analytics, powering fast, responsive user experiences.'
   },
   {
     name: 'AWS',
     icon: siAmazon,
-    category: 'tools'
+    category: 'tools',
+    business: 'Industry-leading cloud provider, offering scalable infrastructure, security, and global reach for your business.'
   }
 ];
 
@@ -109,19 +123,21 @@ export default function TechnologiesComponent() {
                   const Icon = tech.icon;
                   return (
                     <div key={tech.name} className="flex flex-col items-center transform transition-all duration-200 hover:scale-105 group">
-                      <div className="w-14 h-14 flex items-center justify-center bg-slate-700/50 rounded-lg p-2.5 transition-all duration-200 hover:bg-slate-600/50 hover:shadow-lg hover:shadow-slate-900/20">
-                        <svg
-                          role="img"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className={`w-9 h-9 text-slate-200 transition-colors duration-200 group-hover:text-[#${Icon.hex}]`}
-                          fill="currentColor"
-                        >
-                          <path d={Icon.path} />
-                        </svg>
-                      </div>
-                      <span className="mt-3 text-sm text-slate-300 text-center group-hover:text-slate-200">{tech.name}</span>
-                    </div>
+  <Popover text={tech.business}>
+    <div className="w-14 h-14 flex items-center justify-center bg-slate-700/50 rounded-lg p-2.5 transition-all duration-200 hover:bg-slate-600/50 hover:shadow-lg hover:shadow-slate-900/20">
+      <svg
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        className={`w-9 h-9 text-slate-200 transition-colors duration-200 group-hover:text-[#${Icon.hex}]`}
+        fill="currentColor"
+      >
+        <path d={Icon.path} />
+      </svg>
+    </div>
+  </Popover>
+  <span className="mt-3 text-sm text-slate-300 text-center group-hover:text-slate-200">{tech.name}</span>
+</div>
                   );
                 })}
               </div>

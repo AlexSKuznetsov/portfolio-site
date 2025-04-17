@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+  href: string;
+}
+const { title, href } = Astro.props;
+---
+<li class="service-card list-none">
+  <a href={href} class="group block p-6 bg-slate-800/50 rounded-lg shadow transition-shadow duration-200 hover:shadow-lg">
+    <div class="icon mb-4 text-4xl">
+      <slot name="icon" />
+    </div>
+    <h3 class="text-2xl font-bold text-slate-100 mb-2">{title}</h3>
+    <div class="text-slate-300 mb-4">
+      <slot />
+    </div>
+    <span class="inline-block text-blue-400 font-semibold group-hover:text-blue-300">Learn more →</span>
+  </a>
+</li>

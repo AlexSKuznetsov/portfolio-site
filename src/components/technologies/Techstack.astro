@@ -1,11 +1,16 @@
 ---
 import { Image } from 'astro:assets';
 import astro from '../assets/astro-logo-dark.svg';
+import Popover from '../common/Popover.astro';
 ---
 
 <section>
   <div class='flex items-start'>
-    <Image src={astro} alt='astro-logo' width='20' />
-    <span class='font-sans text-xs text-slate-400 ml-2'>Astro.build</span>
+    <Popover text="Astro: The all-in-one web framework for building fast, content-focused websites.">
+      <span class="flex items-center">
+        <Image src={astro} alt='astro-logo' width='20' />
+        <span class='font-sans text-xs text-slate-400 ml-2'>Astro.build</span>
+      </span>
+    </Popover>
   </div>
 </section>
